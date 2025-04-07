@@ -11,8 +11,8 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/$1",
+      "src": "/$1",
+      "dest": "/index.html",
       "headers": {
         "Cache-Control": "public, max-age=0, must-revalidate"
       }
