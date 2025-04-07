@@ -29,5 +29,8 @@ export default defineConfig(({ mode }) => ({
         main: path.resolve(process.cwd(), "index.html"),
       },
     },
+    manifest: true,
+    assetsInlineLimit: 0,
   },
+  base: "/"
 }));
