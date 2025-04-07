@@ -16,11 +16,18 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(process.cwd(), "./src"),
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
+    assetsDir: "assets",
+    sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(process.cwd(), "index.html"),
+      },
+    },
   },
 }));
